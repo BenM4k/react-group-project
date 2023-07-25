@@ -31,3 +31,9 @@ nav ul li a {
 nav ul li a.active {
   text-decoration: underline;
 }
+
+.rows {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 1.2fr;
+  border: 1px solid grey;
+}

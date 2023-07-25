@@ -14,7 +14,7 @@ export const fetchmission = createAsyncThunk('missions/data', async () => {
 });
 
 const initialState = {
-  missions: null,
+  selectedmissions: [],
   isLoading: true,
 };
 
@@ -26,13 +26,15 @@ const missionSlice = createSlice({
       ...state,
       isLoading: true,
     }))
-      .addCase(fetchmission.fulfilled, (state, action) => {
-        console.log(action.payload);
-        return {
-          ...state,
-          isLoading: false,
-        };
-      })
+      .addCase(fetchmission.fulfilled, (state, action) => ({
+        ...state,
+        selectedmissions: action.payload.map((item) => ({
+          mission_name: item.mission_name,
+          mission_id: item.mission_id,
+          description: item.description,
+        })),
+        isLoading: false,
+      }))
       .addCase(fetchmission.rejected, (state) => ({
         ...state,
         isLoading: false,
