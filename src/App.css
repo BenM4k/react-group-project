@@ -134,6 +134,7 @@ nav ul li a.active {
   font-weight: bold;
   padding: 0 0.3rem 0.1rem;
   border-radius: 0.4rem;
+  text-transform: uppercase;
 }
 
 .Join-button {
