@@ -11,7 +11,7 @@ const Profile = () => {
       <div className="reserved-rockets">
         <h2>My Rockets</h2>
         <ul>
-          {rockets.filter((rocket) => rocket.reserved === true).map((rocket) => (
+          {rockets.filter((rocket) => rocket?.reserved === true).map((rocket) => (
             <li key={rocket.id}>{rocket.name}</li>
           ))}
         </ul>
