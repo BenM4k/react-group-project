@@ -15,19 +15,30 @@ nav {
   justify-content: space-between;
   margin: 0 4rem;
   border-bottom: 1px solid black;
-  padding: 1rem;
+  padding: 1.4rem 1rem;
+}
+
+.navdiv {
+  display: flex;
+  font-size: 1.3rem;
+  gap: 10px;
 }
 
 nav ul {
-  gap: 10px;
   list-style-type: none;
 }
 
 nav ul li a {
+  padding-inline: 1.5rem;
+  font-size: 1.5rem;
   text-decoration: none;
-  color: #030303;
+  color: rgb(0, 138, 230);
   font-weight: bold;
   text-transform: capitalize;
+}
+
+nav li:last-child {
+  border-left: 2px solid black;
 }
 
 nav ul li a.active {
@@ -157,4 +168,28 @@ nav ul li a.active {
 
 .description {
   padding-bottom: 3rem;
+}
+
+.profilewrap {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 4rem;
+}
+
+.profilewrap h2 {
+  font-size: 2rem;
+  margin: 1rem 0 1.2rem;
+}
+
+.profilewrap ul {
+  border: 1px solid rgb(162, 162, 162);
+  border-radius: 0.2rem;
+}
+
+.profilewrap ul li {
+  padding: 1.2rem 1.2rem 1.8rem;
+  border: 1.5px solid rgb(162, 162, 162);
+  list-style: none;
+  font-size: 1.5rem;
 }

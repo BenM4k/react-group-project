@@ -7,7 +7,10 @@ export default function Header() {
   return (
     <header className="header">
       <nav className="navbar">
-        <img className="headerimg" src={planet} alt="logo" />
+        <div className="navdiv">
+          <img className="headerimg" src={planet} alt="logo" />
+          <h1>Space Travelers&apos; Hub</h1>
+        </div>
         <ul className="app__flex">
           {links.map((link) => (
             <li key={link}>
