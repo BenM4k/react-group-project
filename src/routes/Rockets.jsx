@@ -30,18 +30,17 @@ const Rockets = () => {
               </p>
               <button
                 type="button"
-                onClick={(e) => {
+                className={rocket.reserved ? 'rocket-reserved' : null}
+                onClick={() => {
                   if (!rocket.reserved) {
                     handleReserve(rocket.id);
-                    e.target.classList.add('rocket-reserved');
                   }
                   if (rocket.reserved) {
                     handleCancel(rocket.id);
-                    e.target.classList.remove('rocket-reserved');
                   }
                 }}
               >
-                {rocket.reserved ? 'Cancel Reservasion' : 'Reserve Rocket'}
+                {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
               </button>
             </div>
           </li>

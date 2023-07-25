@@ -49,18 +49,19 @@ const rocketSlice = createSlice({
       });
     },
   },
-  extraReducers: {
-    [getRockets.pending]: (state) => {
-      state.loadRockets = true;
-    },
-    [getRockets.fulfilled]: (state, action) => {
-      state.loadRockets = false;
-      state.rockets = action.payload;
-    },
-    [getRockets.rejected]: (state) => {
-      state.loadRocketsTimeout = true;
-      state.loadRockets = false;
-    },
+  extraReducers: (builder) => {
+    builder
+      .addCase(getRockets.pending, (state) => {
+        state.loadRockets = true;
+      })
+      .addCase(getRockets.fulfilled, (state, action) => {
+        state.loadRockets = false;
+        state.rockets = action.payload;
+      })
+      .addCase(getRockets.rejected, (state) => {
+        state.loadRocketsTimeout = true;
+        state.loadRockets = false;
+      });
   },
 });
 
