@@ -19,8 +19,26 @@ const initialState = {
 };
 
 const missionSlice = createSlice({
-  name: 'books',
+  name: 'mission',
   initialState,
+  reducers: {
+    joinmission: (state, action) => {
+      state.selectedmissions = state.selectedmissions.map((mission) => {
+        if (mission.mission_id !== action.payload) {
+          return mission;
+        }
+        return { ...mission, reserved: true };
+      });
+    },
+    leavemission: (state, action) => {
+      state.selectedmissions = state.selectedmissions.map((mission) => {
+        if (mission.mission_id !== action.payload) {
+          return mission;
+        }
+        return { ...mission, reserved: false };
+      });
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchmission.pending, (state) => ({
       ...state,
@@ -32,6 +50,7 @@ const missionSlice = createSlice({
           mission_name: item.mission_name,
           mission_id: item.mission_id,
           description: item.description,
+          reserved: false,
         })),
         isLoading: false,
       }))
@@ -42,5 +61,7 @@ const missionSlice = createSlice({
       }));
   },
 });
+
+export const { joinmission, leavemission } = missionSlice.actions;
 
 export default missionSlice.reducer;
