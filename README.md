@@ -14,7 +14,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -153,7 +152,7 @@ Feel free to check the [issues page](https://github.com/BenM4k/First_Capstone_Pr
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project, U can reach me on my Twitter handle for any collaboration. Here is my Paypal account, for any fund assistance.
+If you like this project, you can reach me on my Twitter handle for any collaboration. Here is my Paypal account, for any fund assistance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
