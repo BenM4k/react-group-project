@@ -11,7 +11,7 @@ export default function Header() {
         <ul className="app__flex">
           {links.map((link) => (
             <li key={link}>
-              <NavLink to={link === 'rockets' ? '/' : `${link}`} activeClassName="active">
+              <NavLink to={link === 'rockets' ? '/' : `${link}`}>
                 {link}
               </NavLink>
             </li>

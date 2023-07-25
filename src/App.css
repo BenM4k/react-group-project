@@ -35,6 +35,12 @@ nav ul li a.active {
   text-decoration: underline;
 }
 
+.rows {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 1.2fr;
+  border: 1px solid grey;
+}
+
 .rocket-list {
   max-width: 1080px;
   margin: 3rem auto;
