@@ -1,9 +1,6 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="assets/ben1.png" alt="logo" width="50"  height="100" />
-  <br/>
-
   <h2><b>Space traveler's Hub</b></h2>
 
 </div>
