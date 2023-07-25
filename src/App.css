@@ -13,7 +13,10 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  border-bottom: 1px solid black;
+  padding: 1rem;
 }
 
 nav ul {
@@ -33,8 +36,8 @@ nav ul li a.active {
 }
 
 .rocket-list {
-  width: 90%;
-  margin: 0 auto;
+  max-width: 1080px;
+  margin: 3rem auto;
 }
 
 .rocket {
@@ -57,7 +60,7 @@ nav ul li a.active {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content:flex-start;
+  justify-content: flex-start;
   gap: 15px;
 }
 
@@ -90,8 +93,4 @@ nav ul li a.active {
 
 .details p span.active {
   display: inline-flex;
-}
-
-.details p {
-  width: 90%;
 }
