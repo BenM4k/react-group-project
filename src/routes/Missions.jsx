@@ -15,13 +15,13 @@ const Missions = () => {
   };
 
   const data = missions.map((mission) => (
-    <div key={mission.mission_id} className="rows">
+    <div key={mission.mission_id} data-testid="missions" className="rows">
       <div className="innerdiv"><h2>{mission.mission_name}</h2></div>
       <div className="innerdiv"><p className="description">{mission.description}</p></div>
       {mission.reserved ? <div className="container innerdiv"><p className="member">Active Member</p></div> : <div className="container innerdiv"><p className="notmember">Not a member</p></div>}
       <div className="container innerdiv">
-        {mission.reserved ? <button type="button" className="Leave-button" onClick={() => handleclick(mission.mission_id, mission.reserved)}>Leave Mission</button>
-          : <button type="button" className="Join-button" onClick={() => handleclick(mission.mission_id, mission.reserved)}>Join Mission</button> }
+        {mission.reserved ? <button type="button" data-testid="leave" className="Leave-button" onClick={() => handleclick(mission.mission_id, mission.reserved)}>Leave Mission</button>
+          : <button type="button" data-testid="join" className="Join-button" onClick={() => handleclick(mission.mission_id, mission.reserved)}>Join Mission</button> }
       </div>
     </div>
   ));
@@ -34,7 +34,7 @@ const Missions = () => {
 
   return (
     <>
-      <div className="wrapmissions">
+      <div data-testid="List" className="wrapmissions">
         <div className="rows">
           <div className="innerdiv"><h2>Mission</h2></div>
           <div className="innerdiv"><h2>Desription</h2></div>

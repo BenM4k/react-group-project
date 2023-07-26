@@ -1,21 +1,21 @@
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
-import Rockets from '../routes/Rockets';
 import configureMockStore from 'redux-mock-store';
+import Rockets from '../routes/Rockets';
 
-const mockStore = configureMockStore()
+const mockStore = configureMockStore();
 
 describe('Test Rockets rendering', () => {
-  test('Render a rocket', () => {    
+  test('Render a rocket', () => {
     const mockData = [
       {
         id: '1',
         name: 'Rocket',
         desc: 'Rocket Description',
         image: 'http://',
-        reserved: false
-      }
+        reserved: false,
+      },
     ];
 
     const store = mockStore({
@@ -23,7 +23,7 @@ describe('Test Rockets rendering', () => {
         rockets: mockData,
         loadRockets: false,
         loadRocketsTimeout: false,
-      }
+      },
     });
 
     render(
@@ -33,7 +33,7 @@ describe('Test Rockets rendering', () => {
         </Provider>
       </BrowserRouter>,
     );
-    
+
     expect(screen.getByText('Rocket')).toBeInTheDocument();
   });
 });
