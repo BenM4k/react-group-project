@@ -26,7 +26,7 @@
 - [📝 License](#license)
 
 
-# 📖 "Awesome Books" Project <a name="about-project"></a>
+# 📖 "Space traveler's Hub" Project <a name="about-project"></a>
 
 This project is a website that allows you to book a flight inside of a NASA rocket and select a Mission to different satellites surrounding the Earth. storage.
 
