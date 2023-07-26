@@ -1,38 +1,195 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__flex {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 4rem;
+  border-bottom: 1px solid black;
+  padding: 1.4rem 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navdiv {
+  display: flex;
+  font-size: 1.3rem;
+  gap: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li a {
+  padding-inline: 1.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: rgb(0, 138, 230);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+nav li:last-child {
+  border-left: 2px solid black;
+}
+
+nav ul li a.active {
+  text-decoration: underline;
+}
+
+.rocket-list {
+  max-width: 1080px;
+  margin: 3rem auto;
+}
+
+.rocket {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.rocket img {
+  width: 170px;
+  height: 150px;
+}
+
+.details {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.details .rocket-reserved {
+  border: 1px solid gray;
+  color: gray;
+  background: none;
+}
+
+.details button {
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(0, 138, 230);
+  color: #fff;
+  cursor: pointer;
+}
+
+.details p span {
+  background-color: rgb(3, 196, 196);
+  color: #fff;
+  height: 21px;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 3px;
+  border-radius: 5px;
+  display: none;
+  margin-right: 5px;
+}
+
+.details p span.active {
+  display: inline-flex;
+}
+
+.wrapmissions {
+  margin: 1rem 5rem;
+  border: 1px solid rgb(172, 172, 172);
+}
+
+.wrapmissions > div:nth-child(even) {
+  background-color: rgb(241 241 241);
+}
+
+.rows {
+  display: grid;
+  grid-template-rows: minmax(50px, auto);
+  grid-template-columns: 20% 40% 20% 20%;
+}
+
+.innerdiv {
+  border: 1px solid rgb(172, 172, 172);
+  padding: 0.8rem 0.6rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.member {
+  color: #fff;
+  background-color: rgb(36, 107, 239);
+  font-weight: bold;
+  padding: 0 0.3rem 0.1rem;
+  border-radius: 0.4rem;
+}
+
+.notmember {
+  color: #fff;
+  background-color: grey;
+  font-weight: bold;
+  padding: 0 0.3rem 0.1rem;
+  border-radius: 0.4rem;
+  text-transform: uppercase;
+}
+
+.Join-button {
+  color: black;
+  border: 2px solid black;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 0.2rem;
+}
+
+.Leave-button {
+  color: red;
+  border: 2px solid red;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 0.2rem;
+}
+
+.description {
+  padding-bottom: 3rem;
+}
+
+.profilewrap {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 4rem;
+}
+
+.profilewrap h2 {
+  font-size: 2rem;
+  margin: 1rem 0 1.2rem;
+}
+
+.profilewrap ul {
+  border: 1px solid rgb(162, 162, 162);
+  border-radius: 0.2rem;
+}
+
+.profilewrap ul li {
+  padding: 1.2rem 1.2rem 1.8rem;
+  border: 1.5px solid rgb(162, 162, 162);
+  list-style: none;
+  font-size: 1.5rem;
 }
