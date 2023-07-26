@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Header from '../component/Header';
 
 describe('Header', () => {
-  test('check if Rocket is in Navbar', () => {
+  test('check links in Navbar', () => {
     render(
       <BrowserRouter>
         <Header />
